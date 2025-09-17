@@ -1,10 +1,7 @@
 const restify = require('restify');
 const { BotFrameworkAdapter } = require('botbuilder');
 
-const adapter = new BotFrameworkAdapter({
-  appId: process.env.MicrosoftAppId,
-  appPassword: process.env.MicrosoftAppPassword
-});
+const adapter = new BotFrameworkAdapter();
 
 const server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, () => {
